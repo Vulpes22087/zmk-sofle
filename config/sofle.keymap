@@ -34,11 +34,15 @@
 // ------------------------------------------------------------------------------------------------------------
 // |  ` ~  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
 // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
-// |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   |     |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-//               | win | LALT | LCTL | MO(2)|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
+// |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |  ; :  |  '  " |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   |        |  |       |  N   |  M    |  , <  |  . > |   /   | RSHIFT|
+//               | win | LALT | LCTL | MO(2)|  ENTER |  | SPACE | MO(3)| RCTRL | RALT  | WIN  |
 bindings = <
-&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp ESCAPE &kp Q &kp W &kp E &kp R &kp T &kp TAB &kp A &kp S &kp D &kp F &kp G &kp LEFT_SHIFT &kp Z &kp X &kp C &kp V &kp B &kp LEFT_GUI &kp LEFT_ALT &kp LEFT_CONTROL &mo 2 &kp ENTER &kp C_MUTE &none &kp N0 &kp N9 &kp N8 &kp N7 &kp N6 &kp BACKSPACE &kp P &kp O &kp I &kp U &kp Y &kp SINGLE_QUOTE &kp SEMICOLON &kp L &kp K &kp J &kp H &kp RIGHT_SHIFT &kp SLASH &kp DOT &kp COMMA &kp M &kp N &kp RIGHT_GUI &kp RIGHT_ALT &kp RIGHT_CONTROL &mo 3 &kp SPACE &none
+&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                        &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none 
+&kp ESCAPE &kp Q &kp W &kp E &kp R &kp T                            &kp Y &kp U &kp I &kp O &kp P &kp BACKSPACE 
+&kp TAB &kp A &kp S &kp D &kp F &kp G                               &kp H &kp J &kp K &kp L &kp SEMICOLON &kp SINGLE_QUOTE 
+&kp LEFT_SHIFT &kp Z &kp X &kp C &kp V &kp B                        &kp N &kp M &kp COMMA &kp DOT &kp SLASH &kp RIGHT_SHIFT 
+&kp LEFT_GUI &kp LEFT_ALT &kp LEFT_CONTROL &mo 2 &kp ENTER &TRANS   &none  &kp SPACE &mo 3&kp RIGHT_CONTROL &kp RIGHT_ALT &kp RIGHT_GUI 
           >;
             >;
 
