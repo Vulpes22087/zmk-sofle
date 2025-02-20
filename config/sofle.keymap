@@ -30,25 +30,26 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "0";
+            display-name = "default";
 // ------------------------------------------------------------------------------------------------------------
-// |  ` ~  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
+// |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
 // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
-// |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |  ; :  |  '  " |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   |        |  |       |  N   |  M    |  , <  |  . > |   /   | RSHIFT|
-//               | win | LALT | LCTL | MO(2)|  ENTER |  | SPACE | MO(3)| RCTRL | RALT  | WIN  |
-bindings = <
-&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                        &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none 
-&kp ESCAPE &kp Q &kp W &kp E &kp R &kp T                            &kp Y &kp U &kp I &kp O &kp P &kp BACKSPACE 
-&kp TAB &kp A &kp S &kp D &kp F &kp G                               &kp H &kp J &kp K &kp L &kp SEMICOLON &kp SINGLE_QUOTE 
-&kp LEFT_SHIFT &kp Z &kp X &kp C &kp V &kp B                        &kp N &kp M &kp COMMA &kp DOT &kp SLASH &kp RIGHT_SHIFT 
-&kp LEFT_GUI &kp LEFT_ALT &kp LEFT_CONTROL &mo 2 &kp ENTER &TRANS   &none  &kp SPACE &mo 3&kp RIGHT_CONTROL &kp RIGHT_ALT &kp RIGHT_GUI 
-          >;
+// |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+//               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
+            bindings = <
+&kp GRAVE &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                           &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &none
+&kp ESC   &kp Q  &kp W    &kp E    &kp R     &kp T                            &kp Y  &kp U     &kp I     &kp O    &kp P    &kp BSPC
+&kp TAB   &kp A  &kp S    &kp D    &kp F     &kp G                            &kp H  &kp J     &kp K     &kp L    &kp SEMI &kp SQT
+&kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B      &kp C_MUTE &none      &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+                 &kp LGUI &kp LALT &kp LCTRL &mo LOWER  &kp RET    &kp SPACE  &mo RAISE  &kp RCTRL &kp RALT  &kp RGUI
+            >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         lower_layer {
-            display-name = "2";
+            display-name = "lower";
 // TODO: Some binds are waiting for shifted keycode support.
 // ------------------------------------------------------------------------------------------------------------
 // |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
@@ -68,7 +69,7 @@ bindings = <
         };
 
         raise_layer {
-            display-name = "3";
+            display-name = "raise";
 // ------------------------------------------------------------------------------------------------------------
 // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
 // |       | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
@@ -93,7 +94,7 @@ bindings = <
 // |        | RGB_BRD | RGB_BRI |         |         |         |                  |      |      |       |      |       |       |
 // |        |         |         |         |         |         | RGB_TOG | |      |      |      |       |      |       |       |
 //                    |         |         |         |         |         | |      |      |      |       |      |
-            display-name = "1";
+            display-name = "adjust";
             bindings = <
 &bt BT_CLR        &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                            &none &none &none &none &none &none
 &ext_power EP_TOG &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF                         &none &none &none &none &none &none
@@ -105,3 +106,4 @@ bindings = <
 
     };
 };
+Blaming zmk-sofle/config/sofle.keymap at fc006604a27dcb22cd39bf85572816986023dd64 · Vulpes22087/zmk-sofle
