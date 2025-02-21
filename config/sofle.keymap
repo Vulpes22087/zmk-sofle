@@ -6,6 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 
 #define BASE 0
@@ -98,7 +99,7 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4                      &trans       &trans    &trans    &trans     &trans  &trans
+&bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4                      &trans       &trans    &trans    &trans     &trans  &ext_power EP_OFF
 &trans      &kp KP_NUMLOCK  &kp PSCRN         &none            &trans        &kp UNDERSCORE                    &kp PG_UP    &trans    &kp UP    &trans     &kp N0  &none
 &trans      &kp PERCENT     &kp AMPERSAND     &kp EXCLAMATION  &kp QUESTION  &kp TILDE                         &kp PG_DN    &kp LEFT  &kp DOWN  &kp RIGHT  &none   &none
 &trans      &kp LESS_THAN   &kp GREATER_THAN  &kp COLON        &kp LPAR      &kp RPAR        &trans    &trans  &kp LS(F10)  &trans    &trans    &trans     &trans  &trans
