@@ -110,15 +110,5 @@
         };
     };
 };
- {
-    chosen {
-        zmk,display = &oled0;
-    };
 
-    oled0: ssd1306@3C {
-        compatible = "solomon,ssd1306fb";
-        reg = <0x3C>;
-        label = "SSD1306";
-    };
-};
 // Blaming zmk-sofle/config/sofle.keymap at fc006604a27dcb22cd39bf85572816986023dd64 · Vulpes22087/zmk-sofle
