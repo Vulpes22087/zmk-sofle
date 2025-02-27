@@ -11,3 +11,5 @@ manifest:
       import: app/west.yml
   self:
     path: config
+# From the root of the zephyr repository
+west build -b frdm_k64f --shield ssd1306_128x64 samples/subsys/display/lvgl
